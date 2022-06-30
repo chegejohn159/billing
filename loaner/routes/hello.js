@@ -5,9 +5,9 @@ const { Elarian } = require('elarian');
 const router = express.Router();
 
 const client = new Elarian({
-  orgId: 'el_org_eu_M8GGTK',
-  appId: 'el_app_iHlqeC',
-  apiKey: 'el_k_test_68ebaa47e66a5e2820db7e9beb78065538f19976170079522a02dec55b56d9ac'
+  orgId: 'el_org_eu_ITlMFV',
+  appId: 'el_app_Qao7WM',
+  apiKey: 'el_k_live_1a877469e2fe43f2f34938a082153365cd50b5c0c7098095efe03c1627d0be9b'
 });
 
 const whatsappChannel = {
@@ -25,21 +25,21 @@ router.get('/', (req, res) => {
       provider: 'cellular'
     });
 
-    await alice.sendMessage(
-        {
-          number: '21500',
-          channel: 'sms'
-        },
-        { body: { text: 'Hello kamau!' } },
-    );
+    // await alice.sendMessage(
+    //     {
+    //       number: '21500',
+    //       channel: 'sms'
+    //     },
+    //     { body: { text: 'Hello kamau!' } },
+    // );
 
     await alice.sendMessage(
-        {
-          number: '+254701020901',
-          channel: 'whatsapp'
-        },
-        { body: { text: 'Hello chege!' } },
-    );
+      {
+        number: 'chegejohn159_bot',
+        channel: 'telegram'
+      },
+      { body: { text: 'Hello chege, Your Payment is Due!' } },
+  );
   }
 
   client
